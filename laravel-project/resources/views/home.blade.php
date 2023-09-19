@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="{{ asset('app.js') }}"></script>
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid  upper-nav">
+            <div class="row  gx-5 pt-1">
+                <div class="col py-2  gx-5 logo">
+                    <img src="./assets/Megaparts-Logo-Light-Large.png" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col py-2 mega-cars">
+                    <span class="mega">Mega</span>
+                    <span class="cars">Cars</span>
+                </div>
+                <div class="col py-2 mega-ad">
+                    <span class="advert">Mega</span>
+                    <span class="ad">Обяви</span>
+                </div>
+                <div class="col pt-3 vectors">
+                    <img src="./assets/Vector.png" class="img-fluid" alt="Responsive image">
+                    <img src="./assets/Vector (1).png" class="img-fluid" alt="Responsive image">
+                    <img src="./assets/Vector (2).png" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="col py-2 login">
+                    <img src="./assets/Vector (3).png" class="img-fluid" alt="Responsive image">
+                    <button class="login-btn">Вход</button>
+                </div>
+                <div class="col pt-3 gx-5 soc-media">
+                    <img src="./assets/Group 15.png" class="social-media" alt="image">
+
+                </div>
+                <div class="col py-2 contact">
+                    <img src="./assets/Vector (4).png" class="img-fluid" alt="Responsive image">
+                    <span class="phone">02 437 32 48</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="second-line">
+            <div class="home">
+                <img src="./assets/Vector (5).png" alt="">
+            </div>
+            <div class="nav-btn">
+                <img src="./assets/Vector (6).png" class="img-fluid" alt="Responsive image">
+                <a class="nav-btns" href="">АВТОЧАСТИ</a>
+            </div>
+            <div class="nav-btn">
+                <img src="./assets/Vector (7).png" class="img-fluid" alt="Responsive image">
+                <a class="nav-btns" href="">БОРСА ЧАСТИ</a>
+            </div>
+            <div class="nav-btn">
+                <img src="./assets/Vector (8).png" class="img-fluid" alt="Responsive image">
+                <a class="nav-btns" href="">АВТОБОРСА</a>
+            </div>
+            <div class="nav-btn">
+                <img src="./assets/Vector (9).png" class="img-fluid" alt="Responsive image">
+                <a class="nav-btns" href="">ПРОДАВА КОЛИ</a>
+            </div>
+            <div class="nav-btn">
+                <img src="./assets/Vector (10).png" class="img-fluid" alt="Responsive image">
+                <a class="nav-btns" href="">ПРОДАВА ЧАСТИ</a>
+            </div>
+            <div class="nav-btn">
+                <img src="./assets/vector(12).png" class="img-fluid" alt="Responsive image">
+                <a class="nav-btns" href="">ИГРИ</a>
+            </div>
+            <div class="nav-btn last-nav-btn">
+                <img src="./assets/Vector (11).png" class="img-fluid" alt="Responsive image">
+                <a class="nav-btns" href="">ЗАСТРАХОВКИ</a>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="search-section">
+        <div class="search-container">
+            <div class="search-box">
+                <div class="inner-search">
+                    <div class="search-icon">
+                        <img src="./assets/Vector (13).png" class="search-vector">
+                    </div>
+                    <div class="quick-search">Бързо търсене</div>
+                </div>
+
+                <div class="search-input">
+                    <div class="search-form">
+                        <input type="text" id="search-input" name="search"
+                            placeholder="Търсете на Част, марка, категория, обява или др.">
+                    </div>
+                    <div class="search-btn">
+                        <button class="btn">Търсене</button>
+                    </div>
+                </div>
+
+                <div class="sections-btns">
+
+                    <div class="search-btns">
+                        <a class="btns" href="">Всичко</a>
+                    </div>
+                    <div class="search-btns">
+                        <a class="btns" href="">Авточасти</a>
+                    </div>
+                    <div class="search-btns">
+                        <a class="btns" href="">Борса Части</a>
+                    </div>
+                    <div class="search-btns">
+                        <a class="btns" href="">Автоборса</a>
+                    </div>
+                    <div class="search-btns">
+                        <a class="btns" href="">Продава Коли</a>
+                    </div>
+                    <div class="search-btns">
+                        <a class="btns" href="">Продава Части</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="banners-slider">
+        <img src="./assets/Rectangle 100.png">
+    </div>
+
+    <div class="highlights">
+        <img src="./assets/Rectangle.png">
+    </div>
+
+
+    <div class="product-slider">
+
+        <div class="upper-text">Специални предложения: </div>
+
+        <div class="cards">
+            <div class="header">
+                <div class="logo-vector">
+                    <img src="./assets/Vector (15).png" alt="">
+                </div>
+                <div class="title">Авточасти</div>
+            </div>
+            <div class="description">Най-големия онлайн магазин <br> за авточасти в България!</div>
+            <div class="button-container">
+                <button class="button-text">Разгледай</button>
+                <div class="arrow">
+                    <img src="./assets/Vector (14).png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="part-container">
+            <img src="./assets/image 2.png" alt="">
+            <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
+            <div class="price">
+                <span class="category">Кат. №: s_167232784</span>
+                <p class="sum">967.70 лв.</p>
+            </div>
+        </div>
+
+        <div class="part-container">
+            <img src="./assets/image 2 (1).png" alt="">
+            <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
+            <div class="price">
+                <span class="category">Кат. №: s_167232784</span>
+                <p class="sum">967.70 лв.</p>
+            </div>
+        </div>
+
+        <div class="part-container">
+            <img src="./assets/image 2.png" alt="">
+            <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
+            <div class="price">
+                <span class="category">Кат. №: s_167232784</span>
+                <p class="sum">967.70 лв.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="product-slider">
+
+        <div class="upper-text offers">Последни оферти и запитвания:</div>
+
+
+        <div class="part-container">
+            <img src="./assets/image 2.png" alt="">
+            <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
+            <div class="price">
+                <span class="category">Кат. №: s_167232784</span>
+                <p class="sum">967.70 лв.</p>
+            </div>
+        </div>
+
+        <div class="part-container">
+            <img src="./assets/image 2 (1).png" alt="">
+            <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
+            <div class="price">
+                <span class="category">Кат. №: s_167232784</span>
+                <p class="sum">967.70 лв.</p>
+            </div>
+        </div>
+
+        <div class="part-container">
+            <img src="./assets/image 2.png" alt="">
+            <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
+            <div class="price">
+                <span class="category">Кат. №: s_167232784</span>
+                <p class="sum">967.70 лв.</p>
+            </div>
+        </div>
+
+        <div class="cards card-parts">
+            <div class="header">
+                <div class="logo-vector">
+                    <img src="./assets/Vector (16).png" alt="">
+                </div>
+                <div class="title">Борса части</div>
+            </div>
+            <div class="description">Най-голямата борса за <br>авточасти в България!</div>
+            <div class="button-container">
+                <button class="button-text">Разгледай</button>
+                <div class="arrow">
+                    <img src="./assets/Vector (17).png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="services">
+
+        <div class="cards card-service">
+            <div class="header">
+                <div class="logo-vector">
+                    <img src="./assets/Vector (18).png" alt="">
+                </div>
+                <div class="title">Автоборса</div>
+            </div>
+            <div class="description">Залагане, търгуване и <br> продаване на автомобили.</div>
+            <div class="button-container">
+                <button class="button-text">Разгледай</button>
+                <div class="arrow">
+                    <img src="./assets/Vector (20).png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="cards card-selling">
+            <div class="header">
+                <div class="logo-vector">
+                    <img src="./assets/Vector (19).png" alt="">
+                </div>
+                <div class="title">Продава коли</div>
+            </div>
+            <div class="description">Обяви за коли.<br>
+                Част от MEGACARS.</div>
+            <div class="button-container">
+                <button class="button-text">Разгледай</button>
+                <div class="arrow">
+                    <img src="./assets/Vector (21).png" alt="">
+                </div>
+            </div>
+            <a href="#!" class="mega-cars">Към MEGACARS<img src="./assets/Vector (24).png" alt=""></a>
+        </div>
+
+        <div class="cards parts-selling">
+            <div class="header">
+                <div class="logo-vector">
+                    <img src="./assets/Vector (15).png" alt="">
+                </div>
+                <div class="title">Продава части</div>
+            </div>
+            <div class="description">Обяви за части.<br>
+                Част от MEGAОБЯВИ.</div>
+            <div class="button-container">
+                <button class="button-text">Разгледай</button>
+                <div class="arrow">
+                    <img src="./assets/Vector (22).png" alt="">
+                </div>
+            </div>
+            <a href="#!" class="mega-cars">Към MEGAОБЯВИ<img src="./assets/Vector (24).png" alt=""></a>
+        </div>
+
+        <div class="cards games">
+            <div class="header">
+                <div class="logo-vector">
+                    <img src="./assets/GameVector.png" alt="">
+                </div>
+                <div class="title">Игри</div>
+            </div>
+            <div class="description">Забавления за ценители.</div>
+            <div class="button-container">
+                <button class="button-text">Разгледай</button>
+                <div class="arrow">
+                    <img src="./assets/Vector (23).png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="service">
+
+        <div class="card-serv">
+            <div class="card-title">
+                <img src="./assets/Vector (25).png" class="" alt="">
+                <p class="card-text">Застраховки</p>
+            </div>
+            <span class="card-description">Застраховай автомобила си.</span>
+        </div>
+
+        <div class="card-serv loans">
+            <div class="card-title">
+                <img src="./assets/Vector (26).png" class="" alt="">
+                <p class="card-text credit">Кредити</p>
+            </div>
+            <span class="card-description">MEGA в нужда се познава.</span>
+        </div>
+
+        <div class="card-serv diary">
+            <div class="card-title">
+                <img src="./assets/Vector (27).png" class="" alt="">
+                <p class="card-text diaries">Автодневник</p>
+            </div>
+            <span class="card-description">Твоят автодневник.</span>
+        </div>
+
+        <div class="card-serv news">
+            <div class="card-title">
+                <img src="./assets/Vector (28).png" class="" alt="">
+                <p class="card-text auto-news">Новини</p>
+            </div>
+            <span class="card-description">Всичко в света на колите.</span>
+        </div>
+
+    </div>
+
+
+    <div class="carousel-section">
+
+        <!-- <button class="carousel-arrow left-arrow" onclick="moveCarousel('left')">Left</button> -->
+
+        <div class="carousell carousel-card" id="card1" data-position="1">
+            <div class="message-wrapper">
+                <div class="carousel-vector">
+                    <img src="./assets/“.png" alt="">
+                </div>
+                <div class="review">Много бързо и изключително коректно и професионално отношение!</div>
+            </div>
+
+            <div class="customer-wrapper">
+                <div class="image"></div>
+
+                <div class="customer-info">
+                    <div class="customer-name">Мартин Илиев</div>
+
+                    <div class="stars-wrapper">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousell carousel-card main-card" id="card2" data-position="2">
+            <div class="message-wrapper">
+                <div class="carousel-vector">
+                    <img src="./assets/“.png" alt="">
+                </div>
+                <div class="review">Реагират своевременно, СУК работи и повишава качеството на услугите.</div>
+            </div>
+
+            <div class="customer-wrapper">
+                <div class="image"></div>
+
+                <div class="customer-info">
+                    <div class="customer-name">Мартин Илиев</div>
+
+                    <div class="stars-wrapper">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousell carousel-card" id="card3" data-position="3">
+            <div class="message-wrapper">
+                <div class="carousel-vector">
+                    <img src="./assets/“.png" alt="">
+                </div>
+                <div class="review">Доволен съм от поръчаните до момента авточасти. Хубаво е да Ви има на пазара с
+                    авточасти, защото иначе автоморгите ще откачат с високите си цени. Вие сте нещо като регулатор на
+                    този не малък пазар на части втора употреба. Благодаря!
+                </div>
+            </div>
+
+            <div class="customer-wrapper">
+                <div class="image"></div>
+
+                <div class="customer-info">
+                    <div class="customer-name">Мартин Илиев</div>
+
+                    <div class="stars-wrapper">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousell carousel-card" id="card4" data-position="0">
+            <div class="message-wrapper">
+                <div class="carousel-vector">
+                    <img src="./assets/“.png" alt="">
+                </div>
+                <div class="review">Единственото място в Интернет (българско) , където намирам части за коли 25+ години.
+                    Имат доставка за Пловдив! Реално Ти ги носят на адрес. Не мога да кажа нищо лошо.
+                </div>
+            </div>
+
+            <div class="customer-wrapper">
+                <div class="image"></div>
+
+                <div class="customer-info">
+                    <div class="customer-name">Мартин Илиев</div>
+
+                    <div class="stars-wrapper">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousell carousel-card" id="card5" data-position="4">
+            <div class="message-wrapper">
+                <div class="carousel-vector">
+                    <img src="./assets/“.png" alt="">
+                </div>
+                <div class="review">СУПЕР</div>
+            </div>
+
+            <div class="customer-wrapper">
+                <div class="image"></div>
+
+                <div class="customer-info">
+                    <div class="customer-name">Мартин Илиев</div>
+
+                    <div class="stars-wrapper">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                        <img src="./assets/Vector (29).png" class="star" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <button class="carousel-arrow right-arrow" onclick="moveCarousel('right')">Right</button> -->
+    </div>
+
+    <div class="map-section">
+
+        <img src="./assets/Map (Desktop).png" id="map-image" alt="">
+
+        <div class="popup" id="popup">
+            <h1>Location Details</h1>
+            <p><strong>Website:</strong> <a href="https://www.megaparts.bg/" target="_blank">Visit our website</a></p>
+            <img src="./assets/Megaparts-Logo-Light-Large.png" alt="">
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <div class="inner-section">
+                    <div class="footer-title">Полезно за вас</div>
+                    <div class="section-info">Формуляр за връщане</div>
+                    <div class="section-info">
+                        <span>Мнения за </span>
+                        <span class="mega-footer">MEGAPARTS</span>
+                    </div>
+                    <div class="section-info">Регистрирай се за продавач</div>
+                </div>
+                <div class="car-valuation">
+                    <div class="inner-section">
+                        <div class="car-valuation-text">Онлайн оценка на колата ви</div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="footer-section">
+                <div class="inner-section">
+                    <div class="footer-title">Онлайн Пазаруване</div>
+                    <div class="section-info">Общи условия на платформата</div>
+                    <div class="section-info">
+                        <span>Общи условия на MEGAPARTS Борса</span>
+
+                    </div>
+                    <div class="section-info">Общи условия Вендор</div>
+                    <div class="section-info">Политика за използване на “бисквитки”</div>
+                    <div class="section-info">Политика за защита на лични данни</div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="inner-section">
+                    <div class="footer-title">За нас</div>
+                    <div class="section-info">Представяне</div>
+                    <div class="section-info">Социални мрежи</div>
+                    <div class="section-info">02 437 32 48</div>
+                    <div class="section-info">at@megaparts.bg</div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="inner-section">
+                    <div class="footer-title"><img src="./assets/Megaparts-Logo-Light-Large.png" alt=""></div>
+                    <div class="section-info">
+                        <span>2023 © MEGAPARTS Marketplace</span>
+                    </div>
+                    <div class="section-info footer-ad">
+                        <span class="mega">Mega</span>
+                        <span class="cars">Cars</span>
+                    </div>
+
+                    <div class="section-info ads">
+                        <span class="advert">Mega</span>
+                        <span class="ad">Обяви</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>
