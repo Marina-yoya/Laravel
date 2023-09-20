@@ -39,7 +39,7 @@
                 </div>
                 <div class="col py-2 login">
                     <img src="./assets/Vector (3).png" class="img-fluid" alt="Responsive image">
-                    <button class="login-btn">Вход</button>
+                    <a href="{{ route('login') }}" class="login-btn">Вход</a>
                 </div>
                 <div class="col pt-3 gx-5 soc-media">
                     <img src="./assets/Group 15.png" class="social-media" alt="image">
