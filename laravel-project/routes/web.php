@@ -5,6 +5,12 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MyProductsController;
+use App\Http\Controllers\ViewAllProductsController;
+use App\Http\Controllers\CartController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +38,14 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
-Route::get('/my-products', 'MyProductsController@index')->name('my_products');
-Route::get('/view-all-products', 'ViewAllProductsController@index')->name('view_all_products');
-Route::post('/add-product', 'ProductController@store')->name('add_product');
+Route::post('/profile', [ProfileController::class, 'store'])->name('profile.store');
+Route::get('/my-products', [MyProductsController::class, 'index'])->name('my-products');
+Route::get('/edit-product/{product_id}', [MyProductsController::class, 'edit'])->name('edit_product');
+Route::post('/update-product/{product_id}', [MyProductsController::class, 'update'])->name('update_product');
+Route::get('/delete-product/{product_id}', [MyProductsController::class, 'delete'])->name('delete_product');
+Route::get('/view_all_products', [ViewAllProductsController::class, 'index'])->name('view_all_products');
+Route::post('/add_to_cart', [CartController::class, 'addProductToCart'])->name('add_to_cart');
+
+Route::get('/cart', [CartController::class, 'viewCart'])->name('cart');
+Route::post('/remove-from-cart/{cart_item_id}', [CartController::class, 'removeProductFromCart'])->name('remove-from-cart');
+

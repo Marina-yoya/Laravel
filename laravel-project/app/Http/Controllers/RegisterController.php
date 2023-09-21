@@ -17,12 +17,7 @@ class RegisterController extends Controller
     {
         return view('register');
     }
-
-
-
     protected $redirectTo = RouteServiceProvider::HOME;
-
-
     protected function validator(array $data)
     {
         $validator = Validator::make($data, [
@@ -36,8 +31,6 @@ class RegisterController extends Controller
         }
 
         return $validator;
-
-
     }
 
     protected function create(array $data)
@@ -58,13 +51,9 @@ class RegisterController extends Controller
             dd('Validation failed:', $validator->errors()->all());
         }
 
-        
         $user = $this->create($request->all());
-    
         Auth::login($user);
-
-        
-        return redirect('/profile'); 
+        return redirect('/profile');
     }
 
 }
