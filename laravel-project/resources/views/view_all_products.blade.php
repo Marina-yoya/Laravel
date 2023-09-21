@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <link rel="stylesheet" href="myProducts.css">
     <title>View All Products</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="{{ asset('app.js') }}"></script>
 </head>
 <body>
     <header>
@@ -13,7 +17,10 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="{{ route('my-products') }}">My Products</a></li>
-                <li><a href="{{ route('cart') }}">My Cart</a></li>
+                <li><a href="{{ route('cart') }}">
+                    My Cart
+                    <span id="cart-badge">0</span>
+                </a></li>
                 <li><a href="{{ route('profile') }}">Add product</a></li>
                
             </ul>

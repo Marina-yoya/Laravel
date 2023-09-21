@@ -37,15 +37,19 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 
-Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
-Route::post('/profile', [ProfileController::class, 'store'])->name('profile.store');
-Route::get('/my-products', [MyProductsController::class, 'index'])->name('my-products');
-Route::get('/edit-product/{product_id}', [MyProductsController::class, 'edit'])->name('edit_product');
-Route::post('/update-product/{product_id}', [MyProductsController::class, 'update'])->name('update_product');
-Route::get('/delete-product/{product_id}', [MyProductsController::class, 'delete'])->name('delete_product');
-Route::get('/view_all_products', [ViewAllProductsController::class, 'index'])->name('view_all_products');
-Route::post('/add_to_cart', [CartController::class, 'addProductToCart'])->name('add_to_cart');
+Route::group(['middleware' => ['web']], function () {
 
-Route::get('/cart', [CartController::class, 'viewCart'])->name('cart');
-Route::post('/remove-from-cart/{cart_item_id}', [CartController::class, 'removeProductFromCart'])->name('remove-from-cart');
+    Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
+    Route::post('/profile', [ProfileController::class, 'store'])->name('profile.store');
+    Route::get('/my-products', [MyProductsController::class, 'index'])->name('my-products');
+    Route::get('/edit-product/{product_id}', [MyProductsController::class, 'edit'])->name('edit_product');
+    Route::post('/update-product/{product_id}', [MyProductsController::class, 'update'])->name('update_product');
+    Route::get('/delete-product/{product_id}', [MyProductsController::class, 'delete'])->name('delete_product');
+    Route::get('/view_all_products', [ViewAllProductsController::class, 'index'])->name('view_all_products');
+    Route::post('/add_to_cart', [CartController::class, 'addProductToCart'])->name('add_to_cart');
 
+    Route::get('/cart', [CartController::class, 'viewCart'])->name('cart');
+    Route::post('/remove-from-cart/{cart_item_id}', [CartController::class, 'removeProductFromCart'])->name('remove-from-cart');
+    Route::get('/get_cart_item_count', [CartController::class, 'getCartItemCount'])->name('get_cart_item_count');
+
+});

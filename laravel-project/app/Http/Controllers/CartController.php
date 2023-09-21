@@ -18,6 +18,7 @@ class CartController extends Controller
             'quantity' => 'required|integer|min:1',
         ]);
 
+
         $user = Auth::user();
         $cart = Cart::firstOrCreate(['user_id' => $user->id]);
         $cartItem = $cart->cartItems->where('product_id', $request->input('product_id'))->first();
@@ -33,8 +34,19 @@ class CartController extends Controller
             ]);
         }
 
-        return redirect()->route('cart')->with('success', 'Product added to cart successfully.');
+        return redirect()->route('view_all_products')->with('success', 'Product added to cart successfully.');
+
     }
+
+    public function getCartItemCount()
+    {
+        $user = Auth::user();
+        $cart = $user->cart;
+        $cartItemCount = $cart ? $cart->cartItems->sum('quantity') : 0;
+
+        return response()->json(['success' => true, 'cartItemCount' => $cartItemCount]);
+    }
+
 
 
     public function removeProductFromCart($cart_item_id)

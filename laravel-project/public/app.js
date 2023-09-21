@@ -2,12 +2,9 @@
 $(document).ready(function () {
 
     const loginButton = $('.login-btn');
-    loginButton.click(function() {
-      window.location.href = 'loginPage.php';
+    loginButton.click(function () {
+        window.location.href = 'loginPage.php';
     });
-
-
-
 
 
     const mapImage = $('#map-image');
@@ -52,4 +49,44 @@ $(document).ready(function () {
     popup.click(function () {
         hidePopup();
     });
+
+
+
+
+    function updateCartBadge(count) {
+        $('#cart-badge').text(count);
+    }
+
+    function getCartItemCount() {
+        const csrfToken = $('meta[name="csrf-token"]').attr('content');
+        console.log(csrfToken);
+        $.ajax({
+            type: 'GET',
+            url: '/get_cart_item_count',
+            headers: {
+                'X-CSRF-TOKEN': csrfToken,
+            },
+            success: function (data) {
+                console.log("here")
+                if (data.success) {
+                    updateCartBadge(data.cartItemCount);
+                    console.log('Updated cart count:', data.cartItemCount);
+                } else {
+                    console.error('Failed to retrieve cart item count.');
+                }
+            },
+            error: function (status) {
+                console.error('An error occurred while fetching cart item count.');
+                console.error('Status:', status);
+
+            }
+        });
+    }
+
+    getCartItemCount();
+
+
+
+
+
 });
