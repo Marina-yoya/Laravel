@@ -164,6 +164,9 @@
             </div>
         </div>
 
+
+      
+
         <div class="part-container">
             <img src="./assets/image 2.png" alt="">
             <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
@@ -190,8 +193,25 @@
                 <p class="sum">967.70 лв.</p>
             </div>
         </div>
+        
 
+        @foreach ($products as $product)
+      
+        <div class="part-container">
+            <img style="width: 288px; height: 179.583px; border-radius: 10px;" src="{{ $product->img_url }}" alt="">
+            <p class="part-description">{{ $product->part_description }}</p>
+            <div class="price">
+                <span class="category">{{ $product->category }}</span>
+                <p class="sum">{{ number_format($product->price, 2) }}</p>
+            </div>
+        </div>
+       
+        @endforeach
+    
     </div>
+
+
+  
 
 
     <div class="product-slider">

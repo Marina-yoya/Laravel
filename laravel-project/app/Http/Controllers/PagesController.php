@@ -2,12 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Product;
+
+use Illuminate\Support\Facades\View;
 
 class PagesController extends Controller
 {
-    public function home()
+    // public function home()
+    // {
+    //     return view('home');
+    // }
+
+    public function index()
     {
-        return view('home');
+        $products = Product::all();
+        View::share('products', $products); 
+        return view('home', ['products' => $products]);
+
+      
     }
+
+
 }
+
+

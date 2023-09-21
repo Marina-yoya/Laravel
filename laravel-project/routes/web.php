@@ -22,11 +22,13 @@ use App\Http\Controllers\CartController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home', [PagesController::class, 'home']);
+// Route::get('/', [PagesController::class, 'home']);
+Route::get('/', [PagesController::class, 'index'])->name('home');
+
 Route::get('/login', function () {
     return view('login');
 })->name('login');
