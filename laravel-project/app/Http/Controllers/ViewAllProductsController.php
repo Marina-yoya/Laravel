@@ -14,7 +14,6 @@ class ViewAllProductsController extends Controller
         $products = Product::all();
         View::share('products', $products); 
         return view('view_all_products', ['products' => $products]);
-
       
     }
 }

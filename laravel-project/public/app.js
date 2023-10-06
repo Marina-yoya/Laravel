@@ -87,6 +87,40 @@ $(document).ready(function () {
 
 
 
-   
+
+    let carouselContainer = $(".carousel-container");
+    let carousel = carouselContainer.find(".carousel");
+    let products = carouselContainer.find(".part-container");
+    let productWidth = products.eq(0).width() + parseInt(products.eq(0).css("marginRight"));
+    let currentPosition = 0;
+
+    $(".left-arrow").on("click", function () {
+        console.log("clicked")
+        if (currentPosition < 0) {
+            currentPosition += productWidth;
+            if (currentPosition > 0) {
+                currentPosition = 0;
+            }
+            carousel.css("transform", "translateX(" + currentPosition + "px)");
+        }
+    });
+
+
+    $(".right-arrow").on("click", function () {
+        console.log("clicked")
+        if (currentPosition > -productWidth * (products.length - 3)) {
+            currentPosition -= productWidth;
+            if (currentPosition < -productWidth * (products.length - 3)) {
+                currentPosition = -productWidth * (products.length - 3);
+            }
+            carousel.css("transform", "translateX(" + currentPosition + "px)");
+        }
+    });
+
+
+
+
+
+
 
 });

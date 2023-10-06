@@ -165,7 +165,31 @@
         </div>
 
 
-      
+    <div class="arrow-container">
+        <div class="arrow left-arrow">←</div>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+
+
+      <div class="part-container">
+            <img src="./assets/image 2.png" alt="">
+            <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
+            <div class="price">
+                <span class="category">Кат. №: s_167232784</span>
+                <p class="sum">967.70 лв.</p>
+            </div>
+        </div>
+
+       
+        <div class="part-container">
+            <img src="./assets/image 2.png" alt="">
+            <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
+            <div class="price">
+                <span class="category">Кат. №: s_167232784</span>
+                <p class="sum">867.70 лв.</p>
+            </div>
+        </div>
 
         <div class="part-container">
             <img src="./assets/image 2.png" alt="">
@@ -176,26 +200,10 @@
             </div>
         </div>
 
-        <div class="part-container">
-            <img src="./assets/image 2 (1).png" alt="">
-            <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
-            <div class="price">
-                <span class="category">Кат. №: s_167232784</span>
-                <p class="sum">967.70 лв.</p>
-            </div>
-        </div>
-
-        <div class="part-container">
-            <img src="./assets/image 2.png" alt="">
-            <p class="part-description">Фар за Audi A5 Coupe I (06.2007 <br>- 01.2017), купе, позиция: дясна</p>
-            <div class="price">
-                <span class="category">Кат. №: s_167232784</span>
-                <p class="sum">967.70 лв.</p>
-            </div>
-        </div>
+       
         
-
         @foreach ($products as $product)
+        
       
         <div class="part-container">
             <img style="width: 288px; height: 179.583px; border-radius: 10px;" src="{{ $product->img_url }}" alt="">
@@ -208,7 +216,14 @@
        
         @endforeach
     
-    </div>
+    </div> 
+
+</div>
+</div>
+<div class="arrow-container">
+    
+    <div class="arrow right-arrow">→</div>
+</div>
 
 
   

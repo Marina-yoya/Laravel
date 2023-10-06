@@ -2,6 +2,7 @@
 
 body {
     overflow-x: hidden;
+    width: 106%;
 }
 
 .upper-nav {
@@ -530,11 +531,61 @@ body {
     background: none;
 }
 
-.arrow {
-    margin-bottom: 2px;
+
+
+
+.carousel-container {
+    width: 48%; 
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
+.carousel {
+    transition: transform 0.5s ease-in-out;
+     
+     display: flex;
+}
+
+
+
+/* .arrow-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2; 
+    cursor: pointer;
+} */
+
+
+.arrow.left-arrow {
+    position: absolute;
+    top: 40%;
+    left: 34%;
+    /* transform: translateY(-50%); */
+    z-index: 2;
+    cursor: pointer;
+}
+
+.arrow.right-arrow {
+    position: absolute;
+    top: 199%;
+    right: 13%;
+    /* transform: translateY(-50%); */
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+
+/* 
+.arrow {
+    margin-bottom: 2px;
+} */
+
 .part-container {
+    width: auto;
     margin-left: 30px;
     margin-top: 40px;
 }
