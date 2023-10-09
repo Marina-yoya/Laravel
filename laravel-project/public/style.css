@@ -155,7 +155,7 @@ body {
 .second-line .nav-btn:nth-child(8) {
     background: #202D39;
     border: 0.75px #DC5426 solid;
-    
+
 }
 
 
@@ -535,7 +535,7 @@ body {
 
 
 .carousel-container {
-    width: 48%; 
+    width: 48%;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -544,8 +544,8 @@ body {
 
 .carousel {
     transition: transform 0.5s ease-in-out;
-     
-     display: flex;
+
+    display: flex;
 }
 
 

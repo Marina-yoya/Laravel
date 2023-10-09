@@ -102,6 +102,7 @@ $(document).ready(function () {
                 currentPosition = 0;
             }
             carousel.css("transform", "translateX(" + currentPosition + "px)");
+            // carousel.style.transform = "translateX(" + currentPosition + "px)";
         }
     });
 
@@ -114,6 +115,7 @@ $(document).ready(function () {
                 currentPosition = -productWidth * (products.length - 3);
             }
             carousel.css("transform", "translateX(" + currentPosition + "px)");
+            //   carousel.style.transform = "translateX(" + currentPosition + "px)";
         }
     });
 
