@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\RegistrationConfirmation;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\VerificationEmail;
 
 class RegisterController extends Controller
 {
@@ -56,6 +57,7 @@ class RegisterController extends Controller
         $user = $this->create($request->all());
 
         Mail::to($user->email)->send(new RegistrationConfirmation($user));
+        Mail::to($user->email)->send(new VerificationEmail($user));
 
         Auth::login($user);
         return redirect('/profile');

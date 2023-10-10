@@ -78,7 +78,7 @@ $(document).ready(function () {
             error: function (status) {
                 console.error('An error occurred while fetching cart item count.');
                 console.error('Status:', status);
-
+                
             }
         });
     }
